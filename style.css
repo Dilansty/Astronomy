@@ -9,17 +9,16 @@ header{
     display: flex;
     background-color: #9A8675;
     width:100vw;
-    height: 120px;
+    height: 80px;
     align-items: center;
-    gap: 25vw;
-    justify-content: start;
+    justify-content: space-between;
+    padding: 25px;
 }
 .logo{
     position: static;
 }
 .menu{
     display: flex;
-    background-color: aqua;
     width: 569px;
     height: 20px;
     justify-content: space-between;
@@ -33,46 +32,174 @@ body{
     flex-direction: column;
     align-items: start;
     background-image:url(img/backgroundImage.png);
-    background-size: cover; 
+    background-size: 100%; 
     background-position: center; 
     background-repeat: no-repeat; 
     background-attachment: fixed;
     z-index: -50;
+    animation: pulsoZoom 30s infinite;
+   
 }
 .seta{
     width: 15px;
     height: 19px;
-    background-color: blueviolet;
 }
 
 .logoImg{
-    margin-left: 25px;
-    width: 198px;
-    height: 79px;
+    width: 189px;
+    height: 70px;
 }
 main{
     display: flex;
     background-color: wheat;
     height: 100vh;
     width: 100%;
+    flex-direction: column;
+    padding-left: 960px;
+    padding-top: 50vw ;
+    
     
 }
 .Lua{
-    width: 723px;
-    height: 515px;
+   
     position: absolute;
     color: #ffffff5f;
     z-index: -999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%)
+    animation: spin 100s linear infinite;
 }
 .meio{
-    height: 100px;
-    margin-top: 200px;
-    background-color: #9A8675;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    
 }
 span, h1, h2, h3{
     color: #fff;
 }
+.pesquisa{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
 
+.lupa, .menuBolinha{
+    width: 30px;
+    height: 30px;
+}
+.seta{
+    width: 10px;
+    height: 10px;
+}
+.setaPages{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+
+}
+.Astro{
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    height: 800px;
+    padding-top: 300px;
+    padding-left: 500px;
+
+
+}
+.list{
+    display: flex;
+
+    align-items: end;
+    justify-content: start;
+    flex-direction: column;
+    padding-top: 300px;
+    padding-right: 600px;
+    width: 50vw;
+    height: 800px;
+    gap: 20px;
+}
+.TXT2{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.TXT1{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 20px;
+    
+}
+.mainButton{
+    color: #fff;
+    margin-top: 100px;
+    width: 229px;
+    height: 71px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    background-color: #9A8675;
+
+}
+.subtlt{
+    color: #9A8675;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes pulsoZoom {
+    0% {
+     background-size:100%;
+    }
+    50% {
+      background-size:115%;
+    }
+    100%{
+        background-size: 100%;
+    }
+  }
+
+  /*MOBILE*/
+@media(max-width: 480px){
+    .descricao p{
+        display: none;
+    }
+    .descricao h2{
+        font-size: 42px;
+        width: 350px;
+    }
+    body{
+    background-size: 200%;
+    }
+    .container a{
+        width: 100%;
+
+    }
+    .pikachu{
+        height: 380px;
+    }
+    .subtlt{
+       display:  none;
+    }
+    
+    
+    @keyframes pulsoZoom {
+        0% {
+         background-size:200%;
+        }
+        50% {
+          background-size:215%;
+        }
+        100%{
+            background-size: 200%;
+        }
+
+    }
+}
